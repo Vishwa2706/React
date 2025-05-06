@@ -1,0 +1,115 @@
+// src/styles/navbar.scss
+.navbar {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5rem;
+
+    li {
+      padding: 10px;
+    }
+  }
+
+  a {
+    color: black !important;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      color: grey !important;
+    }
+
+    &.active {
+      color: grey !important;
+    }
+  }
+
+  .theme-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 26px;
+    border-radius: 100px;
+    border: none;
+    background: var(--background-secondary);
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+
+    &.light {
+      background: linear-gradient(45deg, hsl(7, 100%, 71%), hsl(46, 100%, 65%));
+
+      .icon {
+        margin-left: 1rem;
+      }
+    }
+
+    &.dark {
+      background: linear-gradient(
+        45deg,
+        hsl(225, 100%, 60%),
+        hsl(296, 80%, 40%)
+      );
+
+      .icon {
+        margin-right: 1rem;
+      }
+    }
+
+    .toggle-thumb {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 22px;
+      height: 22px;
+      background: #fff;
+      border-radius: 50%;
+      transition: left 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    &.light {
+      background: linear-gradient(45deg, hsl(7, 100%, 71%), hsl(46, 100%, 65%));
+    }
+
+    &.dark {
+      background: linear-gradient(
+        45deg,
+        hsl(225, 100%, 60%),
+        hsl(296, 80%, 40%)
+      );
+      .toggle-thumb {
+        left: calc(100% - 2px - 22px);
+      }
+    }
+  }
+
+  .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: white;
+  }
+
+  .logo-div {
+    h1 {
+      padding-left: 2rem;
+    }
+    .logo-image {
+      width: 10rem;
+      height: auto;
+      padding: 10px;
+    }
+  }
+
+  .navigation-tabs {
+    padding-right: 2rem;
+    display: flex;
+    align-items: center;
+  }
+}
